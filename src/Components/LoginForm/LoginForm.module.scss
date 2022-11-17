@@ -1,5 +1,19 @@
 @import "../../assets/sass/main.scss";
 
 .container {
-  background-color: $green-light;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  input {
+    display: flex;
+    flex-direction: column;
+  }
 }
