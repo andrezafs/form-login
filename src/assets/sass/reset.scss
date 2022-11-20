@@ -10,13 +10,6 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  font-size: 1vw;
-  @media (max-width: 1200px) {
-    font-size: 1.5vw;
-  }
-  @media (max-width: 568px) {
-    font-size: 3vw;
-  }
 }
 
 /* Sections
@@ -164,6 +157,10 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 
+button {
+  border: none;
+  cursor: pointer;
+}
 button,
 input,
 optgroup,

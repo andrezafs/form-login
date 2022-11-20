@@ -1,19 +1,181 @@
 @import "../../assets/sass/main.scss";
 
-.container {
-  flex: 1;
+.containerForm {
   display: flex;
-  justify-content: center;
+  flex: 1;
+  background-color: $white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 375px) {
+    padding: 0 1.25rem;
+  }
+}
+
+.mainForm {
+  width: 50%;
   align-items: center;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-
-  input {
+  max-width: 347px;
+  width: 100%;
+  .label {
     display: flex;
     flex-direction: column;
+
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1875rem;
+    letter-spacing: 0em;
+
+    color: $gray;
+    > input {
+      padding: 1.0625rem 1.25rem;
+      border: 1px solid $white-300;
+      border-radius: 0.3125rem;
+      margin: 0.6875rem 0;
+
+      font-family: Lato;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.0625rem;
+      letter-spacing: 0em;
+
+      color: $gray;
+    }
+  }
+}
+
+.headerForm {
+  margin-bottom: 2.5rem;
+  h1 {
+    font-family: Merriweather;
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 2.0625rem;
+    letter-spacing: 0em;
+    color: $gray;
+  }
+
+  h2 {
+    margin-bottom: 0.4375rem;
+
+    font-family: Merriweather;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0em;
+    color: $gray;
+  }
+}
+
+.recoverPassword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  .checkbox {
+    display: flex;
+    align-items: center;
+
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    letter-spacing: 0em;
+    color: $gray;
+
+    gap: 0.625rem;
+
+    > input {
+      width: 0.9375rem;
+      height: 0.9375rem;
+      background-color: $white-200;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 0.0625rem solid $white-300;
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+
+      &:checked {
+        background-color: $green-light;
+      }
+    }
+  }
+
+  a {
+    font-family: Lato;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.0625rem;
+    letter-spacing: 0em;
+
+    color: $purple-light;
+  }
+}
+
+.formButtons {
+  display: flex;
+  flex-direction: column;
+  button {
+    padding: 0.9375rem 0;
+    border-radius: 0.125rem;
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.1875rem;
+    letter-spacing: 0em;
+    border: 1px solid #e8e8e8;
+  }
+  .login {
+    background-color: $green-light;
+    color: $white;
+    margin-bottom: 0.9375rem;
+
+    &:hover {
+      color: $gray;
+      background-color: $white;
+      border: 0.0625rem solid $green-light;
+    }
+  }
+  .google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $gray;
+    color: $white;
+
+    img {
+      margin-right: 0.6875rem;
+    }
+  }
+}
+
+.footerForm {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  margin-bottom: 3.125rem;
+  span {
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1875rem;
+    letter-spacing: 0em;
+    color: $gray;
+  }
+  a {
+    font-family: Lato;
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1875rem;
+    letter-spacing: 0em;
+    color: $purple-light;
   }
 }

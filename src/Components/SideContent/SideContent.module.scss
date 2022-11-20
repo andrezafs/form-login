@@ -1,8 +1,13 @@
 @import "../../assets/sass/main.scss";
 
 .container {
+  background-color: $white-200;
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 }

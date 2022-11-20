@@ -2,13 +2,14 @@ import styles from "./LoginForm.module.scss";
 import google from "../../../public/google.svg";
 export function LoginForm() {
   return (
-    <div className={styles.container}>
+    <div className={styles.containerForm}>
+      <div></div>
       <form action="" className={styles.form}>
         <header className={styles.headerForm}>
           <h2>Bem vindo de volta</h2>
           <h1>Faça login na sua conta</h1>
         </header>
-        <label htmlFor="email">
+        <label htmlFor="email" className={styles.label}>
           E-mail
           <input
             type="email"
@@ -17,7 +18,7 @@ export function LoginForm() {
             placeholder="Insira seu e-mail"
           />
         </label>
-        <label htmlFor="password">
+        <label htmlFor="password" className={styles.label}>
           Password
           <input
             type="password"
@@ -27,27 +28,29 @@ export function LoginForm() {
           />
         </label>
         <div className={styles.recoverPassword}>
-          <label htmlFor="check">
+          <label htmlFor="checkbox" className={styles.checkbox}>
+            <input type="checkbox" name="checkbox" id="checkbox" />
             Lembre de mim
-            <input type="checkbox" name="check" id="checkbox" />
           </label>
           <a href="#"> Esqueceu sua senha?</a>
         </div>
 
         <div className={styles.formButtons}>
-          <button type="submit">Entarr</button>
-          <button type="submit">
-            <img src={google} alt="" />
-            Ou faça login com o google
+          <button type="submit" className={styles.login}>
+            Entrar
+          </button>
+          <button type="submit" className={styles.google}>
+            <img src={google} alt="Logo do google" />
+            Ou faça login com o Google
           </button>
         </div>
-
-        <div className={styles.createAccount}>
-          <span>
-            Não tem uma conta? <a href="#">Cadastre-se</a>{" "}
-          </span>
-        </div>
       </form>
+
+      <footer className={styles.footerForm}>
+        <span>
+          Não tem uma conta? <a href="#">Cadastre-se</a>{" "}
+        </span>
+      </footer>
     </div>
   );
 }
